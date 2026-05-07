@@ -53,7 +53,7 @@ public class ExtentReportManager implements ITestListener {
 	
 	public void onFinish(ITestContext context)
 	{
-		extenttest.flush();
+		extentreport.flush();
 		
 	}
 	
