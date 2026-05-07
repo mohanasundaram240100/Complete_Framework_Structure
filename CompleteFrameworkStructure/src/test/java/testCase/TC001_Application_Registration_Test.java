@@ -9,23 +9,16 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import baseClass.BaseClass;
 import pageObject.HomePage;
 import pageObject.RegistrationPage;
 
-public class TC001_Application_Registration_Test {
+public class TC001_Application_Registration_Test extends BaseClass {
 	
 	
 WebDriver driver;
 	
-	@BeforeClass
-	public void setup()
-	{
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://tutorialsninja.com/demo/");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-	}
-	
+		
 	@Test
 	public void Registration()
 	{
@@ -51,10 +44,5 @@ WebDriver driver;
 	
 	
 	
-	@AfterClass
-	public void tearDown()
-	{
-		driver.quit();
-	}
 
 }
